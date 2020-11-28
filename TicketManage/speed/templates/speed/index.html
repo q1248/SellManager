@@ -1,0 +1,47 @@
+{% extends 'speed/root.html' %}
+{% block content %}
+
+    {% include 'speed/head.html' %}
+    <br>
+    <br>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="card col-12 text-center" style="padding: 0">
+                <div class="card-head ">
+                    <h4>省内单程车票</h4>
+                </div>
+
+                <br>
+                <div class="card-body" style="padding: 0">
+                    {% include 'speed/tables/table1.html' %}
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="card col-12 text-center" style="padding: 0">
+                <div class="card-head ">
+                    <h4>跨省车票</h4>
+                </div>
+
+                <br>
+                <div class="card-body" style="padding: 0">
+                    {% include 'speed/tables/table1.html' %}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    {% include 'speed/tail.html' %}
+
+{% endblock %}

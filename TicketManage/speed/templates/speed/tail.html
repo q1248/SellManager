@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card border-success  mb-3">
+                <div class="card-header text-center bg-transparent border-success">最新发布</div>
+                <div class="card-body border-light ">
+                    {% for i in  news %}
+                        <li>
+                            <a href="#" class="alert-link"> {{ i.message }}</a>
+                        </li>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card mb-3 ">
+                <div class="card-header text-center bg-transparent ">常见问题</div>
+                <div class="card-body">
+                    {% for i in  problem %}
+                        <li>
+                            <a href="#" class="alert-link"> {{ i.message }}</a>
+                        </li>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-4 " style="height: 10px">
+            <div class="card mb-3" >
+                <div class="card-header text-center bg-transparent">旅行tips</div>
+                <div class="card-body">
+                    {% for i in  travelTips %}
+                        <li>
+                            <a href="#" class="alert-link"> {{ i.message }}</a>
+                        </li>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
