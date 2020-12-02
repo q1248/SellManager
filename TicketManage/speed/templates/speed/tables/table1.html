@@ -15,11 +15,18 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        {% for i in inticket %}
+            <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.startStation }}</td>
+            <td>{{ i.endStation }}</td>
+            <td>{{ i.startTime }}</td>
+            <td>{{ i.endTime }}</td>
+            <td>{{ i.totalTime }}</td>
+            <td>{{ i.leftTicket }}</td>
+            <td>单程</td>
+            <td><a href="">购买</a></td>
+        {% endfor %}
         </tr>
         </tbody>
     </table>

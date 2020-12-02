@@ -1,0 +1,45 @@
+{% extends 'speed/root.html' %}
+
+{% block content %}
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="card col-4  " style="padding: 0em">
+                <div class="card-header text-center shadow bg-light"><h4>用户注册</h4></div>
+                <div class="card-body shadow">
+                    <form action="{% url 'register' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>用户名</label>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">邮箱</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                                   aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密码</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">点我检查</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">注册</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="container text-center">
+        </div>
+
+    </div>
+
+{% endblock %}

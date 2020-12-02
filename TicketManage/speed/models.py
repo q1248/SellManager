@@ -16,5 +16,17 @@ class tickets(models.Model):
     startTime = models.DateTimeField()
     endTime = models.DateTimeField()
     totalTime = models.CharField(max_length=100)
+    leftTicket = models.IntegerField(default=100)
     type = models.CharField(max_length=30)
-    backkups = models.CharField(max_length=100)
+
+
+class customer(models.Model):
+    u_name = models.CharField(max_length=10)
+    u_password = models.CharField(max_length=255)
+    u_ticket = models.CharField(max_length=30, null=True)
+    u_email = models.EmailField()
+
+
+class PurchaseHistory(models.Model):
+    customerName = models.CharField(max_length=10)
+    ticketId = models.CharField(max_length=50)

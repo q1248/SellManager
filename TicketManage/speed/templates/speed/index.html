@@ -9,11 +9,12 @@
 
         <div class="row">
             <div class="card col-12 text-center" style="padding: 0">
-                <div class="card-head ">
+                <div class="card-head  shadow">
+                    <br>
                     <h4>省内单程车票</h4>
+                    <br>
                 </div>
 
-                <br>
                 <div class="card-body" style="padding: 0">
                     {% include 'speed/tables/table1.html' %}
                 </div>
@@ -25,14 +26,15 @@
         <br>
 
         <div class="row">
-            <div class="card col-12 text-center" style="padding: 0">
-                <div class="card-head ">
+            <div class="card col-12 text-center " style="padding: 0">
+                <div class="card-head shadow">
+                    <br>
                     <h4>跨省车票</h4>
+                    <br>
                 </div>
 
-                <br>
                 <div class="card-body" style="padding: 0">
-                    {% include 'speed/tables/table1.html' %}
+                    {% include 'speed/tables/table2.html' %}
                 </div>
             </div>
 
@@ -43,5 +45,5 @@
     <br>
     <br>
     {% include 'speed/tail.html' %}
-
+    {% include 'speed/copyright.html' %}
 {% endblock %}
