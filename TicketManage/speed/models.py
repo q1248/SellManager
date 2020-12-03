@@ -1,4 +1,3 @@
-import null as null
 from django.db import models
 
 
@@ -7,6 +6,7 @@ class someTips(models.Model):
     id = models.AutoField(primary_key=True)
     message = models.CharField(max_length=300)
     group = models.CharField(max_length=100)
+    aritcle = models.CharField(max_length=1000, default="This is some describe")
 
 
 class tickets(models.Model):
@@ -29,4 +29,4 @@ class customer(models.Model):
 
 class PurchaseHistory(models.Model):
     customerName = models.CharField(max_length=10)
-    ticketId = models.CharField(max_length=50)
+    ticketId = models.CharField(max_length=50, unique=True)

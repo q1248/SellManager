@@ -26,7 +26,7 @@
             <td>{{ i.totalTime }}</td>
             <td>{{ i.leftTicket }}</td>
             <td>单程</td>
-            <td><a href="">购买</a></td>
+            <td><a href="{% url 'buy' i.id %}">购买</a></td>
         {% endfor %}
         </tr>
         </tbody>

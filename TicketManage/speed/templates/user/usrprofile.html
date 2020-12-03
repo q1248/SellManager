@@ -1,0 +1,36 @@
+{% extends 'speed/root.html' %}
+{% block content %}
+
+    {% include 'bar/bar1.html' %}
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="card ">
+                    <div class="card-head text-center shadow">
+                        <h4>我的信息</h4>
+                    </div>
+                    <div class="card-body">
+                        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                            <h5 id="list-item-1">用户名:{{ cusinfo.u_name }}</h5>
+                            <h5 id="list-item-2">邮箱: {{ cusinfo.u_email }}</h5>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <a href="{% url "space" %}" class="btn btn-primary active text-center" role="button"
+                               aria-pressed="true">返回</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+{% endblock %}

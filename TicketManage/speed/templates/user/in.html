@@ -12,7 +12,7 @@
             <div class="card col-4  " style="padding: 0em">
                 <div class="card-header text-center shadow bg-light"><h4>用户登陆</h4></div>
                 <div class="card-body shadow">
-                    <form action="{% url 'register' %}" method="post">
+                    <form action="{% url 'login' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="exampleInputEmail1">邮箱</label>
@@ -23,7 +23,14 @@
                             <label for="exampleInputPassword1">密码</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                         </div>
-                        <button type="submit" class="btn btn-primary">登陆</button>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <button type="submit" class="btn btn-primary ">登陆</button>
+
+                            <div class="col-2"></div>
+                            <a href="{% url "index" %}" class="btn btn-primary  " role="button" aria-pressed="true">返回首页</a>
+                        </div>
+                        <h6 class="text-center " style="color: orangered">{{ message }}</h6>
                     </form>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">车次</th>
+        <th scope="col">出发站</th>
+        <th scope="col">到达站</th>
+        <th scope="col">出发时间</th>
+        <th scope="col">到达时间</th>
+        <th scope="col">历时</th>
+        <th scope="col">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in u_logs %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.startStation }}</td>
+            <td>{{ i.endStation }}</td>
+            <td>{{ i.startTime }}</td>
+            <td>{{ i.endTime }}</td>
+            <td>{{ i.totalTime }}</td>
+            <td><a href="{% url "remove" i.id %}" class="btn btn-danger  " role="button" aria-pressed="true">退票</a></td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>

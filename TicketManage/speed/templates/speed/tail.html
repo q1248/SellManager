@@ -6,7 +6,7 @@
                 <div class="card-body border-light ">
                     {% for i in  news %}
                         <li>
-                            <a href="#" class="alert-link"> {{ i.message }}</a>
+                            <a href="{% url "news" i.id %}" class="alert-link"> {{ i.message }}</a>
                         </li>
                     {% endfor %}
 
