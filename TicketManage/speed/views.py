@@ -74,11 +74,9 @@ def register(request):
         email = request.POST.get('email')
         password = make_password(password)
         customer.objects.create(u_name=name, u_password=password, u_email=email)
-
-    context = {
-
-    }
-    return render(request, 'user/register.html', context)
+        return HttpResponseRedirect('/')
+    else:
+        return render(request, 'user/register.html')
 
 
 def space(request):
